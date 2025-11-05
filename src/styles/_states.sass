@@ -1,0 +1,15 @@
+@mixin down 
+  &:not([disabled]):active 
+        @content
+    
+@mixin inactive 
+  &:disabled 
+        @content
+    
+@mixin hover 
+    &:not([disabled]):hover 
+        @content
+
+@mixin focus 
+    &:not([disabled]):focus 
+        @content 

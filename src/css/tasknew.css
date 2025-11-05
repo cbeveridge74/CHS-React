@@ -1,0 +1,21 @@
+.chs .root {
+    min-width: 275px;
+}
+.chs .title {
+    font-size: 14px;
+}
+.chs .pos {
+    margin-bottom: 12px;
+}
+.chs .actions {
+    text-align: right;
+    display: block;
+}
+.chs .row{
+    margin-top: 32px;
+    width: 100%;
+}
+
+.chs .card{
+    box-shadow: 1px 1px 8px rgba(52,64,77,1);
+}

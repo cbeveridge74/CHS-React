@@ -1,0 +1,81 @@
+/* CARDS */
+@mixin down 
+  &:not([disabled]):active 
+     @content
+    
+@mixin inactive 
+  &:disabled 
+    @content
+    
+@mixin hover 
+    &:not([disabled]):hover 
+      @content
+
+@mixin focus 
+    &:not([disabled]):focus 
+      @content 
+
+.chs
+
+  .mk-card
+    @include mk-shadow-tier4
+    @include mk-border-radius-large
+    @include mk-font-base-default
+    background-color: #FFF
+    z-index: 1
+    left: 10vw
+    top: 10vh
+
+  .mk-card-title 
+    @include mk-font-title-emphasised
+    border-bottom: solid 1px $mk-grey-7000
+
+  .mk-card-body
+    padding: 24px 0
+
+  .mk-card-title,
+  .mk-card-footer
+    height: 64px
+    line-height: 64px
+
+  .mk-card-body
+    min-height: 128px
+
+  .mk-card_title,
+  .mk-card
+    text-align: left
+
+  .mk-card-menu,
+  .mk-card-footer
+    text-align: right
+
+  .mk-card-footer
+    border-top: solid 1px $mk-grey-7000
+
+  .mk-card-option
+    text-align: left
+    padding-top: 24px
+
+  .mk-card-buttons mk-button
+    display: inline-block
+    margin: 4px 
+
+  // MK Card actions for Material UI 
+  .mk-card-actions .mk-confirmation
+    text-align: center
+    background-color: $mk-pastelBlue-8000
+    user-select: none
+
+  .mk-card-actions .mk-confirmation:hover
+    background-color: $mk-pastelBlue-7000
+    cursor: pointer
+    
+  .mk-card-actions .mk-confirmation:active
+    background-color: $mk-pastelBlue-6000
+    cursor: pointer
+
+
+
+
+
+

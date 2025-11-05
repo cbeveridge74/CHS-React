@@ -1,0 +1,71 @@
+/* CHECKBOX */
+.mk-checkbox-container 
+  display: block
+  position: relative
+  padding-left: 32px
+  margin-bottom: 0
+  cursor: pointer
+  @include mk-font-base-default
+  color: $mk-text-dark
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+/* Hide the browser's default checkbox */
+.mk-checkbox-container input
+  position: absolute
+  opacity: 0
+  cursor: pointer
+  height: 0
+  width: 0
+
+
+/* Create a custom checkbox */
+.mk-checkbox-checkmark
+  position: absolute
+  top: 0
+  left: 0
+  height: 20px
+  width: 20px
+  background-color: #FFF
+  border: 1px solid $mk-grey-6000
+  @include mk-border-radius-medium
+
+
+/* On mouse-over, add a grey background color */
+.mk-checkbox-container:hover input ~ .mk-checkbox-checkmark
+  background-color: $mk-pastelBlue-8000
+  border-color: $mk-brightBlue-5000
+
+.mk-checkbox-container:focus input ~ .mk-checkbox-checkmark
+    border-color: 2px solid $mk-pastelBlue-6000
+
+/* When the checkbox is checked, add a blue background */
+.mk-checkbox-container input:checked ~ .mk-checkbox-checkmark
+  background-color: $mk-brightBlue-5000
+
+
+/* Create the mk-checkbox-checkmark/indicator (hidden when not checked) */
+.mk-checkbox-checkmark:after
+  content: ""
+  position: absolute
+  display: none
+
+
+/* Show the mk-checkbox-checkmark when checked */
+.mk-checkbox-container input:checked ~ .mk-checkbox-checkmark:after
+  display: block
+
+
+/* Style the mk-checkbox-checkmark/indicator */
+.mk-checkbox-container .mk-checkbox-checkmark:after
+  left: 6px
+  top: 3px
+  width: 5px
+  height: 10px
+  border: solid white
+  border-width: 0 2px 2px 0
+  -webkit-transform: rotate(45deg)
+  -ms-transform: rotate(45deg)
+  transform: rotate(45deg)

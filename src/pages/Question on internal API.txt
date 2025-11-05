@@ -1,0 +1,6 @@
+Question on internal API
+1. Tasks: V3 staff groups - documentation, where is the org id?
+2. Connection status - why is this a POST?
+3. In the docs, why are the call repeated?
+4. Tasks announcements - which paramaters are mandatory? Documentation is not clear.
+5. /v1/workflow/tasks/ Documentation does not have all the parameters and no description of STATE options

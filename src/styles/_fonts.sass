@@ -1,0 +1,123 @@
+/* FONTS */
+$font-stack: Arial
+
+@mixin default
+  font-family: $font-stack
+  font-style: normal
+  font-weight: normal
+
+
+@mixin emphasised 
+  @include default
+  font-weight: 600
+
+
+@mixin muted 
+  @include default
+  font-weight: 350
+
+@mixin temp 
+  @include default
+  font-style: italic
+  color: $mk-text-mid
+
+  
+@mixin title 
+  font-size: 16px
+  line-height: 24px
+  letter-spacing: 0.5px
+
+
+@mixin base 
+  font-size: 14px
+  line-height: 20px
+  letter-spacing: 0.3px
+
+
+@mixin tiny 
+  font-size: 12px
+  line-height: 18px
+
+
+@mixin mk-font-title-default 
+  @include title
+  @include default
+
+
+@mixin mk-font-title-emphasised 
+  @include title
+  @include emphasised
+
+
+@mixin mk-font-title-muted 
+  @include title
+  @include muted
+
+@mixin mk-font-title-temp 
+  @include title
+  @include temp
+
+
+@mixin mk-font-base-default
+  @include base
+  @include default
+
+
+@mixin mk-font-base-emphasised 
+  @include base
+  @include emphasised
+
+
+@mixin mk-font-base-muted 
+  @include base
+  @include muted
+
+@mixin mk-font-base-temp 
+  @include base
+  @include temp
+
+
+@mixin mk-font-tiny-default 
+  @include tiny
+  @include default
+
+
+@mixin mk-font-tiny-emphasised 
+  @include tiny
+  @include emphasised
+
+
+@mixin mk-font-tiny-muted 
+  @include tiny
+  @include muted
+
+@mixin mk-font-tiny-temp 
+  @include tiny
+  @include temp
+
+.mk-font-title-default
+  @include mk-font-title-default
+
+.mk-font-title-emphasised
+  @include mk-font-title-emphasised
+
+.mk-font-title-muted
+  @include mk-font-title-muted
+
+.mk-font-base-default
+  @include mk-font-base-default
+
+.mk-font-base-emphasised
+  @include mk-font-base-emphasised
+
+.mk-font-base-muted
+  @include mk-font-base-muted
+
+.mk-font-tiny-default
+  @include mk-font-tiny-default
+
+.mk-font-tiny-emphasised
+  @include mk-font-tiny-emphasised
+
+.mk-font-tiny-muted
+  @include mk-font-tiny-muted
